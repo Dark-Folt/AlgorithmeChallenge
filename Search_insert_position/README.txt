@@ -20,22 +20,20 @@ nums = [ 1, 3, 5, 6], target = 2
 
 DEBUT:
     n <- taille(nums)
-    pos <- INF
     SI target < nums[n/2] ALORS:
         POUR i ALLANT DE 0 A n/2 FAIRE:
-            SI target < nums[i] ALORS:
+            SI target <= nums[i] ALORS:
                 RETOURNER i
             FIN SI 
         FIN POUR
     SINON SI target > nums[n/2] ALORS:
         POUR i ALLANT DE (n/2)+1 A n FAIRE:
-            SI target < nums[i] ALORS:
+            SI target <= nums[i] ALORS:
                 RETOURNER i
-            SINON SI (i == n - 1 && target != nums[i]) ALORS
-                RETOURNER i + 1
             FIN SI
         FIN POUR
     FIN SI
+    RETOUNER n
 FIN:
 
         
